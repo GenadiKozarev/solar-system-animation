@@ -1,0 +1,58 @@
+.orbitCounterClockwise {
+    position: absolute;
+    animation-name: counterClockwise;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+}
+
+@keyframes counterClockwise {
+    from {     transform: rotate(0deg);
+    }
+    to   {  transform: rotate(-360deg);
+    }
+}
+
+.orbitClockwise {
+    position: absolute;
+    animation-name: clockwise;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+}
+
+@keyframes clockwise {
+    from {     transform: rotate(0deg);
+    }
+    to   {  transform: rotate(360deg);
+    }
+}
+
+.orbitSlow {
+    animation-duration: 19s;
+}
+
+.orbitMedium {
+    animation-duration: 14s;
+}
+
+.orbitFast {
+    animation-duration: 8s;
+}
+
+.asteroid {
+    position: absolute;
+    background:red;
+    animation: flying 7s infinite;
+    animation-timing-function: linear;
+    transform-origin: 100% 0;
+}
+
+@keyframes flying {
+    0% {
+        transform: translatex(100%) translatey(0px);
+    }
+    100% {
+        transform: translatex(0px) translatey(100%);
+    }
+}
